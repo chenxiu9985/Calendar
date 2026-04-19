@@ -1,0 +1,34 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Gradle Sync Check",
+      "type": "shell",
+      "command": "if (Test-Path .\\gradlew.bat) { .\\gradlew.bat tasks } else { Write-Host 'Missing gradlew.bat. Generate Gradle Wrapper first, or open the project in Android Studio once to initialize the wrapper.'; exit 1 }",
+      "problemMatcher": [],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "detail": "Check whether Gradle and Android plugin resolution are working on this machine."
+    },
+    {
+      "label": "Assemble Debug APK",
+      "type": "shell",
+      "command": "if (Test-Path .\\gradlew.bat) { .\\gradlew.bat assembleDebug } else { Write-Host 'Missing gradlew.bat. Generate Gradle Wrapper first, or open the project in Android Studio once to initialize the wrapper.'; exit 1 }",
+      "group": "build",
+      "problemMatcher": [],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "detail": "Build a debug APK after Android SDK and Gradle repositories are available."
+    }
+  ]
+}

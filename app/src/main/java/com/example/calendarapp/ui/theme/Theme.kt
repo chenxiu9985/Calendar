@@ -7,28 +7,53 @@ import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 
 private val LightColors = lightColorScheme(
-    primary = Blue500,
+    primary = Indigo,
     onPrimary = White,
-    primaryContainer = Blue200,
-    background = Sand50,
-    onBackground = Slate900,
+    primaryContainer = SoftBlue,
+    onPrimaryContainer = Ink,
+    secondary = Cyan,
+    onSecondary = White,
+    secondaryContainer = SoftCyan,
+    onSecondaryContainer = Ink,
+    tertiary = Violet,
+    onTertiary = White,
+    background = Cloud,
+    onBackground = Ink,
     surface = White,
-    onSurface = Slate900,
-    surfaceVariant = Sand200,
-    onSurfaceVariant = Slate600,
+    onSurface = Ink,
+    surfaceContainer = Mist,
+    surfaceContainerHigh = SoftBlue.copy(alpha = 0.45f),
+    surfaceBright = White,
+    onSurfaceVariant = Slate,
 )
 
 private val DarkColors = darkColorScheme(
-    primary = Blue200,
-    onPrimary = Slate900,
-    primaryContainer = Blue500,
-    background = Slate900,
+    primary = SoftBlue,
+    onPrimary = DarkBase,
+    primaryContainer = DarkCard,
+    onPrimaryContainer = White,
+    secondary = SoftCyan,
+    onSecondary = DarkBase,
+    secondaryContainer = ColorTokens.darkSecondaryContainer,
+    onSecondaryContainer = White,
+    tertiary = SoftLavender,
+    onTertiary = DarkBase,
+    background = DarkBase,
     onBackground = White,
-    surface = Slate800,
+    surface = DarkCard,
     onSurface = White,
-    surfaceVariant = Slate700,
-    onSurfaceVariant = Sand200,
+    surfaceContainer = ColorTokens.darkSurfaceContainer,
+    surfaceContainerHigh = ColorTokens.darkSurfaceContainerHigh,
+    surfaceBright = ColorTokens.darkSurfaceBright,
+    onSurfaceVariant = DarkMuted,
 )
+
+private object ColorTokens {
+    val darkSecondaryContainer = DarkCard.copy(alpha = 0.96f)
+    val darkSurfaceContainer = DarkCard.copy(alpha = 0.98f)
+    val darkSurfaceContainerHigh = DarkCard.copy(alpha = 0.82f)
+    val darkSurfaceBright = DarkCard.copy(alpha = 0.72f)
+}
 
 @Composable
 fun CalendarAppTheme(

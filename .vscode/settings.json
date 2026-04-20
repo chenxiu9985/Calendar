@@ -1,9 +1,0 @@
-{
-  "files.associations": {
-    "*.gradle.kts": "kotlin"
-  },
-  "editor.formatOnSave": true,
-  "[kotlin]": {
-    "editor.defaultFormatter": "esafirm.kotlin-formatter"
-  }
-}
